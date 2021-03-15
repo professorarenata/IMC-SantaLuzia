@@ -1,0 +1,99 @@
+<HTML>
+ <HEAD> <TITLE> Cálculo IMC - Tabela </TITLE>
+ <meta charset=utf-8>
+ 
+ </HEAD>
+ <BODY>
+   <div id="menu">
+     <HR color="darkgreen" size="10">
+     <Font color="darkgreen" face="Verdana" size="6">
+	   Cálculo IMC
+	  </font> <br>
+	  <Font color="green" size="4">
+	   calculoimc.com.br
+	   </font>
+	   <BR> <HR color="silver" size="5">
+   </div>
+   <div id="conteudo">
+   <Font size="5"> <b>
+     Calcular o meu IMC online <br>
+	</font> </b>
+	Digite o seu peso e a sua altura no formulário
+	abaixo para calcular o seu IMC <br> <br>
+	<Form name="form1">
+	 <input type="number" name="peso"> Kg &nbsp &nbsp
+	 <input type="number" name="altura"> m &nbsp &nbsp
+	 <input type="button" name="calcular" value="Calcular IMC" onClick="Calculo(form1)">
+	 <br>
+	 
+	 </form>
+   </div>
+   <div id="resultado">
+     <Font size="4">
+	  Resultado <br> <br>
+	  <script>
+	function Calculo(form1)
+	{
+	    p=(form1.peso.value);
+		a=(form1.altura.value);
+		imc=(p/(a*a));
+		alert(imc);
+		
+		if (imc<17){
+			alert("Muito abaixo do peso");}
+			else {
+				if (imc<=18.49) {
+			    alert("Abaixo do peso");}
+				else{
+					if (imc<=24.99) {
+						alert("Peso NORMAL");}
+					else{ if (imc<=29.99){
+							    alert("Acima do peso");	}
+						  else{	if (imc<=34.99){       
+									    alert("Obesidade I");}
+								else{ if (imc<=39.99){    
+										alert("Obesidade II - Severa");}								
+										else {if (imc>40) {       
+												alert("Obesidade III - Mórbida");}
+										} 
+		
+									} 
+								}
+						
+				        }
+			        }
+
+				}
+				
+			
+		
+	}
+		
+	  </script>
+	 </font>
+   </div>
+   <div id="tabela">
+     <Table border="0">
+	   <TR bgcolor="silver"><TD> <b>Resultado </TD> 
+	                        <TD> <B> Situação</TD></TR>
+       <TR><TD>Abaixo de 17</TD>
+	       <TD> Muito abaixo do peso </TD> </TR>
+       <TR><TD>Entre 17 e 18,49 </TD>
+	       <TD> Abaixo do peso </TD> </TR>
+	   <TR><TD>Entre 18,5 e 24,99</TD>
+	       <TD> Peso Normal </TD> </TR>
+	   <TR><TD>Entre 25 e 29,99</TD>
+	       <TD> Acima do peso </TD> </TR>  
+       <TR><TD>Entre 30 e 34,99</TD>
+	       <TD> Obesidade I </TD> </TR>	
+       <TR><TD>Entre 35 e 39,99</TD>
+	       <TD> Obesidade II (Severa)</TD> </TR>
+       <TR><TD>Acima de 40</TD>
+	       <TD> Obesidade III (Mórbida) </TD> </TR>		   
+	  </Table>
+		   
+		   
+ </BODY>  </HTML>
+ 
+ 
+ 
